@@ -70,8 +70,9 @@ export class AuthService {
 
   addUser(user){
     let headers = new Headers();
+    console.log("in addUser service");
     headers.append('Content-Type','application/json');
-    return this.http.post('http://localhost:3000/users/newUser',  user,{headers: headers})
+    return this.http.post('http://localhost:3000/users/addusers',  user,{headers: headers})
       .pipe(map(res => res.json()));
   }
   
